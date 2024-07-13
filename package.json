@@ -1,0 +1,29 @@
+{
+  "name": "djangoapi",
+  "version": "1.0.0",
+  "description": "Django Task API",
+  "main": "index.js",
+  "author": "Chuong Hoang",
+  "license": "ISC",
+  "scripts": {
+    "dev": "docker-compose -f docker-compose.yml up --build",
+    "prod": "docker-compose -f docker-compose.yml -f docker-compose.prod.yml up --build",
+    "down": "docker-compose -f docker-compose.yml down",
+    "lint": "flake8 .",
+    "format": "black .",
+    "test": "pytest",
+    "test:watch": "pytest --watch",
+    "test:coverage": "pytest --cov=app --cov-report=html"
+  },
+  "devDependencies": {
+    "black": "^0.3.0",
+    "flake8": "^0.0.1",
+    "husky": "^9.0.11",
+    "pytest": "^1.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn format && yarn lint && yarn test"
+    }
+  }
+}

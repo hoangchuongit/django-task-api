@@ -1,0 +1,25 @@
+{
+  "python.pythonPath": "/Users/hc/Library/Python/3.9/bin",
+  "python.linting.flake8Enabled": true,
+  "python.linting.enabled": true,
+  "python.formatting.provider": "black",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true,
+    "source.fixAll.eslint": true
+  },
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/*.pyc": true
+  },
+  "files.watcherExclude": {
+    "**/node_modules/*/**": true,
+    "**/__pycache__/*/**": true,
+    "**/*.pyc": true
+  },
+  "docker.enableLinting": true,
+  "docker.linting": {
+    "enabled": true
+  },
+  "gitlens.views.repositories.files.layout": "tree"
+}
